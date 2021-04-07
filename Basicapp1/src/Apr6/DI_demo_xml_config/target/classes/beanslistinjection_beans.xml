@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+	<bean id="emp1" class="com.cg.spring.beanlistinjection.bean.Employee">
+		<property name="empid" value="102"></property>
+		<property name="ename" value="Babu Raja"></property>
+		<property name="salary" value="2000"></property>
+	</bean>
+	<bean id="emp2" class="com.cg.spring.beanlistinjection.bean.Employee">
+		<property name="empid" value="101"></property>
+		<property name="ename" value="Ajay Saxena"></property>
+		<property name="salary" value="1000"></property>
+	</bean>
+	<bean id="emp3" class="com.cg.spring.beanlistinjection.bean.Employee">
+		<property name="empid" value="103"></property>
+		<property name="ename" value="Chandra Shekar"></property>
+		<property name="salary" value="3000"></property>
+	</bean>
+	
+	<bean id="sbu1" class="com.cg.spring.beanlistinjection.bean.SBU">
+		<property name="sbuCode" value="PES-BU"></property>
+		<property name="sbuHead" value="Rod Johnson"></property>
+		<property name="sbuName" value="Product Engg Services"></property>
+		<property name="employees">
+			<list>
+				<ref bean="emp1"></ref>
+				<ref bean="emp2"></ref>
+				<ref bean="emp3"></ref>
+			</list>
+		</property>
+	</bean>
+
+
+
+
+</beans>

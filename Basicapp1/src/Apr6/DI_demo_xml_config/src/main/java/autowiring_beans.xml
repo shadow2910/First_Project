@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+	
+	<bean id="add1" class="com.cg.spring.DI_demo.bean.Address">	
+		<property name="hno" value="7-8-6">	</property>
+		<property name="street" value="MG Street"></property>
+		<property name="city" value="Hyderabad"></property>
+		<property name="state" value="Telangana"></property>
+	</bean>
+	
+	<!-- comment:
+		<bean id="add2" class="com.cg.spring.DI_demo.bean.Address">	
+		<property name="hno" value="6-7-8">	</property>
+		<property name="street" value="MG Street"></property>
+		<property name="city" value="Hyderabad"></property>
+		<property name="state" value="Telangana"></property>
+	</bean>
+	If we use two address it creates ambiguity which leadds to an error.
+	This can be resolved by annotations.
+	 -->
+	
+	<bean id="per1" class="com.cg.spring.DI_demo.bean.Person" autowire="byType">
+		<property name="ssn" value="7001"></property>
+		<property name="name" value="Ajay Saxena"></property>	
+	</bean>
+</beans>
+
+<!-- 
+BYTYPE searches for bean definition of address type and injects using setter injection.
+We can also use constructor injection but we need a constructor to accept address in our bean class.
+<bean id="per1" class="com.cg.spring.DI_demo.bean.Person" autowire="constructor">
+ -->

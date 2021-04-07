@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+		
+		<bean id="add1" class="com.cg.spring.DI_demo.bean.Address">	
+			<property name="hno" value="7-8-6">	</property>
+			<property name="street" value="MG Street"></property>
+			<property name="city" value="Hyderabad"></property>
+			<property name="state" value="Telangana"></property>
+		</bean>
+		
+		<bean id="per1" class="com.cg.spring.DI_demo.bean.Person">
+			<constructor-arg name="ssn" value="999">	</constructor-arg>
+			<constructor-arg name="name" value="Dinesh Karhik">		</constructor-arg>
+			<constructor-arg name="address" ref="add1">	</constructor-arg>
+		</bean>
+	</beans>
+	
+<!-- 
+Dependency Injection using constructor
+
+We can also do something like this
+<bean id="per1" class="com.cg.spring.DI_demo.bean.Person">
+	<property name="ssn" value="999">	</property>
+	<property name="name" value="Dinesh Karhik">		</property>
+	<constructor-arg name="address" ref="add1">	</constructor-arg>
+</bean>
+But we need to have a constructor which takes only one parameter(address)
+
+
+ -->

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+
+	<bean id="state1" class="com.cg.spring.DI_demo.bean.State">
+		<property name="stateName" value="Telangana">	</property>
+		<property name="cities">
+			<set>
+				<value>Hyderabad</value>
+				<value>Secunderabad</value>
+				<value>RangaReddy</value>
+				<value>Medchal</value>
+				<value>Mahabubnagar</value>
+			</set>
+		</property>
+		<property name="towns">
+			<list>
+				<value>Amravati</value>
+				<value>Vishaka</value>
+			</list>
+		</property>
+		
+		<property name="capitals">
+			<map>
+				<entry key="Amravati" value="AndhraPradesh"></entry>
+				<entry key="Bangalore" value="Karnataka"></entry>
+				<entry key="Mumbai" value="Maharashtra"></entry>
+			</map>
+		</property>
+		
+	</bean>
+</beans>
+
+<!-- 
+Working with set and list 
+ -->

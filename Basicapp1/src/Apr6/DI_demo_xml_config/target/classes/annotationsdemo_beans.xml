@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+
+	<context:annotation-config>		</context:annotation-config>
+	<!--  It means configuration is also done using annotations -->
+	<bean id="add1" class="com.cg.annotationsdemo.bean.Address">	
+		<property name="hno" value="7-8-6">	</property>
+		<property name="street" value="MG Street"></property>
+		<property name="city" value="Hyderabad"></property>
+		<property name="state" value="Telangana"></property>
+	</bean>
+	<bean id="add2" class="com.cg.annotationsdemo.bean.Address">	
+		<property name="hno" value="1-2-3">	</property>
+		<property name="street" value="Anna Salai"></property>
+		<property name="city" value="Chennai"></property>
+		<property name="state" value="Tamilnadu"></property>
+	</bean>
+	<bean id="per1" class="com.cg.annotationsdemo.bean.Person">
+	<property name="ssn" value="7001"></property>
+	<property name="name" value="Ajay Saxena"></property>	
+	</bean>		
+</beans>
